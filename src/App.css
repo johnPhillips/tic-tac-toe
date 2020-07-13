@@ -3,20 +3,22 @@
 }
 
 .board{
-  display: flex;
+  display: grid;
+    grid-template-rows: 85px 85px 85px;
+    grid-template-columns: 85px 85px 85px;
     width: 255px;
     margin: 50px auto;
     box-sizing: border-box;
 }
-.row {
-  display: flex;
-  flex-flow: row wrap;
-}
 .cell {
-  display: flex;
     border: 1px solid black;
     width: calc(250px / 3);
     height: calc(250px / 3);
-    align-items: center;
+    /* align the content */
+    display: flex;
     justify-content: center;
+    align-items: center;
+}
+.isWin {
+  background: cadetblue;
 }
