@@ -3,7 +3,7 @@ I set myself the challenge of building a working tic-tac-toe game in 60 min from
 
 The [first commit](https://github.com/johnPhillips/tic-tac-toe/commit/16d9cf8705487a55ccd2fdce58c89a9cf8297fcf) is the result of that first 60 min. 
 
-After a break and a chance to step back and thing, I then did a second pass of 30 min to optimise what I had done. I added win detection and changed the CSS to use grids rather than flex, meaning slightly cleaner markup ([the commit is here](https://github.com/johnPhillips/tic-tac-toe/commit/24f66a1045622c41a3aaf53da03f783569b30c77)).
+After a break and a chance to step back and think, I then did a second pass of 30 min to optimise what I had done. I added win detection and changed the CSS to use grids rather than flex, meaning slightly cleaner markup ([the commit is here](https://github.com/johnPhillips/tic-tac-toe/commit/24f66a1045622c41a3aaf53da03f783569b30c77)).
 
 The result is deployed [here](https://tactical-toe-tickle.netlify.app/).
 
