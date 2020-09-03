@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { initialState } from "./constants";
 import getIsWin from "./utils/getIsWin";
-import getCellClassName from "./utils/getCellClassName";
+import Board from "./components/Board";
 import "./App.css";
 
 // No point running comparisons until we have enough data to compare
@@ -13,7 +13,7 @@ function App() {
   const [isX, setIsX] = useState(initialState.isX);
   const [gameStatus, setGameStatus] = useState(initialState.gameStatus);
 
-  const handleClick = ([cellNumber]) => {
+  const handleClick = (cellNumber) => {
     // return if cell is already full
     if (getCells[cellNumber]) return;
 
@@ -43,20 +43,11 @@ function App() {
 
   return (
     <div className="App">
-      <div className="board">
-        {getCells.map((cell, i) => (
-          <div
-            className={getCellClassName(gameStatus, i)}
-            key={`cell-${i}`}
-            id={i}
-            onClick={() => {
-              !gameStatus.isWin && handleClick([i]);
-            }}
-          >
-            {cell && String(cell)}
-          </div>
-        ))}
-      </div>
+      <Board
+        cells={getCells}
+        gameStatus={gameStatus}
+        handleCellClick={handleClick}
+      />
       <button onClick={handleReset}>Reset</button>
     </div>
   );
